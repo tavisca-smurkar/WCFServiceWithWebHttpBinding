@@ -10,8 +10,8 @@ namespace WCFServiceWithWebHttpBindingHost
     [ServiceContract]
     public interface IHelloService
     {
+        [WebInvoke(Method = "GET", ResponseFormat = WebMessageFormat.Json, UriTemplate = "/{name}")]
         [OperationContract]
-        [WebInvoke(ResponseFormat =WebMessageFormat.Json , UriTemplate = "/{name}")]
         string GetMessage(string name);
     }
 }
