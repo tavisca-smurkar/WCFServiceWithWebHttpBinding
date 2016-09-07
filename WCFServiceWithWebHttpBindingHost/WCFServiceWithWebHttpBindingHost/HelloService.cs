@@ -10,7 +10,8 @@ namespace WCFServiceWithWebHttpBindingHost
     {
         public string GetMessage(string name)
         {
-            return "Hello " +name;
+            String Name= "Hello " + name;
+            return Name;
         }
     }
 }
