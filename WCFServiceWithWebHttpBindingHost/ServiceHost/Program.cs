@@ -7,7 +7,7 @@ namespace HelloServiceHost
     {
         static void Main(string[] args)
         {
-            using ( ServiceHost host = new ServiceHost(typeof(HelloService)))
+            using ( ServiceHost host = new ServiceHost(typeof(EmployeeService)))
             {
                 host.Open();
                 Console.WriteLine("Service is started at {0}", DateTime.Now);
