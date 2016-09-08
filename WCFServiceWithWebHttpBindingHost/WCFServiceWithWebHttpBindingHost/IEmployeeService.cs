@@ -14,6 +14,8 @@ namespace WCFServiceWithWebHttpBindingHost
         [WebInvoke(Method ="GET", ResponseFormat =WebMessageFormat.Xml, UriTemplate ="/{id}")]
         [OperationContract]
         Employee GetEmployee(string id);
+
+        [OperationContract]
         void SaveEmployee(Employee employee);
     }
 }

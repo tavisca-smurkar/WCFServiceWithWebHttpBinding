@@ -10,10 +10,12 @@ namespace WCFServiceWithWebHttpBindingClient
     {
         static void Main(string[] args)
         {
-            using ( Client.EmployeeServiceClient client = new Client.EmployeeServiceClient("WSHttpBinding_IEmployeeService"))
+            using ( Client.EmployeeServiceClient client = new Client.EmployeeServiceClient("BasicHttpBinding_IEmployeeService"))
             {
-                Console.WriteLine(client.GetEmployee("1").Name);
+                client.SaveEmployee(new Client.Employee { Id = "4", Name = "Hritik", DateOfBirth = DateTime.Now, Gender = Client.Gender.Male });
+                Console.WriteLine(client.GetEmployee("4"));
             }
         }
     }
+    
 }
