@@ -11,11 +11,13 @@ namespace WCFServiceWithWebHttpBindingHost
     public interface IEmployeeService
     {
         
-        [WebInvoke(Method ="GET", ResponseFormat =WebMessageFormat.Xml, UriTemplate ="/{id}")]
+        [WebInvoke(Method ="GET", ResponseFormat =WebMessageFormat.Json, UriTemplate ="/{id}")]
         [OperationContract]
         Employee GetEmployee(string id);
 
         [OperationContract]
         void SaveEmployee(Employee employee);
     }
+
+
 }

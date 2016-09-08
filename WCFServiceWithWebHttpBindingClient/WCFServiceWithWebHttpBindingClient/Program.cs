@@ -15,12 +15,15 @@ namespace WCFServiceWithWebHttpBindingClient
         {
             using ( Client.EmployeeServiceClient client = new Client.EmployeeServiceClient("BasicHttpBinding_IEmployeeService"))
             {
-                client.SaveEmployee(new Client.Employee { Id = "4", Name = "Hritik", DateOfBirth = DateTime.Now, Gender = Client.Gender.Male });
+                client.SaveEmployee(new Client.PermanentEmployee { Id = "4", Name = "Hritik", DateOfBirth = DateTime.Now, Gender = Client.Gender.Male });
                 //Console.WriteLine(client.GetEmployee("4"));
+
+                Console.WriteLine(Serializer.Serialize(client.GetEmployee("4")));
+                Console.WriteLine("********");
 
                 var data = Serializer.Serialize(client.GetEmployee("4"));
 
-                Console.WriteLine(Deserializer.Deserialize<Employee>(data));
+                Console.WriteLine(Deserializer.Deserialize<PermanentEmployee>(data));
             }
         }
     }
