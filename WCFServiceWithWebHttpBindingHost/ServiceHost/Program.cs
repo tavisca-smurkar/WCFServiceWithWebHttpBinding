@@ -7,12 +7,13 @@ namespace HelloServiceHost
     {
         static void Main(string[] args)
         {
-            using ( ServiceHost host = new ServiceHost(typeof(EmployeeService)))
-            {
-                host.Open();
-                Console.WriteLine("Service is started at {0}", DateTime.Now);
-                Console.ReadLine();
-            }
-        }
+
+            ServiceHost hostOne = new ServiceHost(typeof(EmployeeService));
+            hostOne.Open();
+            Console.WriteLine("Service is started at {0}", DateTime.Now);
+            Console.ReadLine();
+            hostOne.Close();
+
+                    }
     }
 }

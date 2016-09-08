@@ -56,13 +56,13 @@
   <ItemGroup>
     <None Include="App.config" />
     <None Include="Service References\Client\EmployeeService.wsdl" />
-    <None Include="Service References\Client\EmployeeService.xsd">
+    <None Include="Service References\Client\item.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\Client\EmployeeService1.xsd">
+    <None Include="Service References\Client\item1.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\Client\EmployeeService2.xsd">
+    <None Include="Service References\Client\item2.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Service References\Client\WCFServiceWithWebHttpBindingClient.Client.Employee.datasource">
@@ -76,7 +76,7 @@
     <WCFMetadataStorage Include="Service References\Client\" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Service References\Client\EmployeeService.disco" />
+    <None Include="Service References\Client\item.disco" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Service References\Client\configuration91.svcinfo" />

@@ -17,6 +17,7 @@ namespace WCFServiceWithWebHttpBindingClient.Client {
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="Employee", Namespace="http://schemas.datacontract.org/2004/07/WCFServiceWithWebHttpBindingHost")]
     [System.SerializableAttribute()]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(WCFServiceWithWebHttpBindingClient.Client.PermanentEmployee))]
     public partial class Employee : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
         
         [System.NonSerializedAttribute()]
@@ -104,6 +105,13 @@ namespace WCFServiceWithWebHttpBindingClient.Client {
                 propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
             }
         }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="PermanentEmployee", Namespace="http://schemas.datacontract.org/2004/07/WCFServiceWithWebHttpBindingHost")]
+    [System.SerializableAttribute()]
+    public partial class PermanentEmployee : WCFServiceWithWebHttpBindingClient.Client.Employee {
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
