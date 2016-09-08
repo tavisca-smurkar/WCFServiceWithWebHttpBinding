@@ -126,6 +126,12 @@ namespace WCFServiceWithWebHttpBindingClient.Client {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IEmployeeService/GetEmployee", ReplyAction="http://tempuri.org/IEmployeeService/GetEmployeeResponse")]
         System.Threading.Tasks.Task<WCFServiceWithWebHttpBindingClient.Client.Employee> GetEmployeeAsync(string id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IEmployeeService/SaveEmployee", ReplyAction="http://tempuri.org/IEmployeeService/SaveEmployeeResponse")]
+        void SaveEmployee(WCFServiceWithWebHttpBindingClient.Client.Employee employee);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IEmployeeService/SaveEmployee", ReplyAction="http://tempuri.org/IEmployeeService/SaveEmployeeResponse")]
+        System.Threading.Tasks.Task SaveEmployeeAsync(WCFServiceWithWebHttpBindingClient.Client.Employee employee);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -161,6 +167,14 @@ namespace WCFServiceWithWebHttpBindingClient.Client {
         
         public System.Threading.Tasks.Task<WCFServiceWithWebHttpBindingClient.Client.Employee> GetEmployeeAsync(string id) {
             return base.Channel.GetEmployeeAsync(id);
+        }
+        
+        public void SaveEmployee(WCFServiceWithWebHttpBindingClient.Client.Employee employee) {
+            base.Channel.SaveEmployee(employee);
+        }
+        
+        public System.Threading.Tasks.Task SaveEmployeeAsync(WCFServiceWithWebHttpBindingClient.Client.Employee employee) {
+            return base.Channel.SaveEmployeeAsync(employee);
         }
     }
 }

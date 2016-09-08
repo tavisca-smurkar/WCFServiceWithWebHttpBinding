@@ -5,7 +5,7 @@ namespace WCFServiceWithWebHttpBindingHost
 {
     public class EmployeeService : IEmployeeService
     {
-        List<Employee> Employee;
+       static List<Employee> Employee;
 
         public EmployeeService()
         {
@@ -27,7 +27,7 @@ namespace WCFServiceWithWebHttpBindingHost
 
         public void SaveEmployee(Employee employee)
         {
-            throw new NotImplementedException();
+            Employee.Add(employee);
         }
     }
 }
